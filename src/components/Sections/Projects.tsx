@@ -15,30 +15,24 @@ const Projects: React.FC = () => {
     },
     {
       id: '2',
-      title: 'ExamForge-UNSIS',
+      title: 'APEX-UNSIS',
       description: 'An exam scheduling web application.',
       technologies: ['Python', 'FastAPI', 'MariaDB'],
-      githubUrl: '#',
-      liveUrl: '#'
-    },
-    {
-      id: '3',
-      title: 'AnyStore POS',
-      description: 'A general purpose point of sale web application.',
-      technologies: ['Java', 'SpringBoot', 'React', 'TypeScript', 'MariaDB'],
-      githubUrl: '#',
-      liveUrl: '#'
-    },
-    {
-      id: '4',
-      title: 'F1 DataDrive',
-      description: 'A data hub for easy accesing F1 telemetry data graphs.',
-      technologies: ['Python', 'FastAPI', 'MariaDB', 'FastF1'],
-      githubUrl: '#',
+      githubUrl: 'https://github.com/APEX-UNSIS/APEX-UNSIS-BACK',
       liveUrl: '#'
     }
   ];
 
+  const contributions: Project[] = [
+    {
+      id: '1',
+      title: 'UnsiSmile',
+      description: 'A data hub for students information.',
+      technologies: ['Java', 'SpringBoot', 'PostgreSQL'],
+      githubUrl: 'https://github.com/DATA-UNSIS/DATA-UNSIS-BACKEND',
+      liveUrl: '#'
+    }
+  ];
 
   
   return (
@@ -54,6 +48,19 @@ const Projects: React.FC = () => {
       <div className="projects-grid">
         {projects.map((project, index) => (
           <ProjectCard key={project.id} project={project} index={index} />
+        ))}
+      </div>
+      <div className="section-header">
+        <h2 className="section-title">Contributions</h2>
+        <div className="section-divider"></div>
+        <p className="section-subtitle">
+          Here are some of my contributions to open source projects
+        </p>
+      </div>
+
+      <div className="projects-grid">
+        {contributions.map((contr, index) => (
+          <ProjectCard key={contr.id} project={contr} index={index} />
         ))}
       </div>
     </AnimatedSection>

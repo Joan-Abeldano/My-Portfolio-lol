@@ -28,11 +28,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
               GitHub
             </a>
           )}
-          {project.liveUrl && (
-            <a href={project.liveUrl} className="project-link">
-              Live Demo
-            </a>
-          )}
         </div>
       </div>
     </div>
