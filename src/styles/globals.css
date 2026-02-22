@@ -27,9 +27,9 @@
   --border-color: #334155;
   --border-light: #475569;
   
-  /* Gradients */
-  --gradient: linear-gradient(135deg, #8b5cf6, #c084fc, #d946ef);
-  --gradient-dark: linear-gradient(135deg, #7c3aed, #a855f7, #c026d3);
+  /* Gradients (now solid colors to avoid animated/effect backgrounds) */
+  --gradient: var(--primary-color);
+  --gradient-dark: var(--primary-dark);
   
   /* Effects */
   --shadow: 0 10px 25px rgba(139, 92, 246, 0.15);

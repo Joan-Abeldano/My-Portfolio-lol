@@ -1,6 +1,7 @@
 import React from 'react';
 import AnimatedSection from '../UI/AnimatedSection';
 import ProjectCard from '../UI/ProjectCard';
+import Contributions from './Contributions';
 import type { Project } from '../Common/types';
 
 const Projects: React.FC = () => {
@@ -27,9 +28,17 @@ const Projects: React.FC = () => {
     {
       id: '1',
       title: 'UnsiSmile',
-      description: 'A data hub for students information.',
-      technologies: ['Java', 'SpringBoot', 'PostgreSQL'],
-      githubUrl: 'https://github.com/DATA-UNSIS/DATA-UNSIS-BACKEND',
+      description: 'Implemented a feature to allow user to disable a guardian from a patient.',
+      technologies: ['Java', 'SpringBoot'],
+      githubUrl: '',
+      liveUrl: '#'
+    },
+    {
+      id: '2',
+      title: 'UnsiSmile',
+      description: 'Implemented a feature in backend to allow users to change password through email verification.',
+      technologies: ['Java', 'SpringBoot'],
+      githubUrl: '',
       liveUrl: '#'
     }
   ];
@@ -50,19 +59,7 @@ const Projects: React.FC = () => {
           <ProjectCard key={project.id} project={project} index={index} />
         ))}
       </div>
-      <div className="section-header">
-        <h2 className="section-title">Contributions</h2>
-        <div className="section-divider"></div>
-        <p className="section-subtitle">
-          Here are some of my contributions to open source projects
-        </p>
-      </div>
-
-      <div className="projects-grid">
-        {contributions.map((contr, index) => (
-          <ProjectCard key={contr.id} project={contr} index={index} />
-        ))}
-      </div>
+      <Contributions contributions={contributions} />
     </AnimatedSection>
   );
 };

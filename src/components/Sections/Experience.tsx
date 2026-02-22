@@ -12,17 +12,16 @@ const ExperienceSection: React.FC = () => {
       period: '2025 - Present',
       description: [
         'Led backend development of multiple web applications using SpringBoot and FastAPI.',
-        'Mentored lower year students and conducted code reviews.'
       ],
       technologies: ['Python', 'FastAPI', 'Java', 'SpringBoot', 'PostgreSQL', 'TypeScript']
     },
     {
       id: '2',
       company: 'Solo Developer',
-      position: 'Full Stack',
+      position: 'Backend Developer',
       period: '2023 - Present',
       description: [
-        
+        'Developement of solo projects and contributions to open source projects using FastAPI and TypeScript.'
       ],
       technologies: ['Python', 'FastAPI', 'TypeScript', 'REST APIs']
     }
