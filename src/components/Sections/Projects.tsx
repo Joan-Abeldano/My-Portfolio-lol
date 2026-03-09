@@ -3,6 +3,8 @@ import AnimatedSection from '../UI/AnimatedSection';
 import ProjectCard from '../UI/ProjectCard';
 import Contributions from './Contributions';
 import type { Project } from '../Common/types';
+import apexunsis from '../../assets/apexunsis.png';
+import dataunsis from '../../assets/dataunsis.png';
 
 const Projects: React.FC = () => {
   const projects: Project[] = [
@@ -12,7 +14,8 @@ const Projects: React.FC = () => {
       description: 'A data hub for students information.',
       technologies: ['Java', 'SpringBoot', 'PostgreSQL'],
       githubUrl: 'https://github.com/DATA-UNSIS/DATA-UNSIS-BACKEND',
-      liveUrl: '#'
+      liveUrl: '#',
+      image: dataunsis
     },
     {
       id: '2',
@@ -20,7 +23,8 @@ const Projects: React.FC = () => {
       description: 'An exam scheduling web application.',
       technologies: ['Python', 'FastAPI', 'MariaDB'],
       githubUrl: 'https://github.com/APEX-UNSIS/APEX-UNSIS-BACK',
-      liveUrl: '#'
+      liveUrl: '#',
+      image: apexunsis
     }
   ];
 
@@ -28,17 +32,8 @@ const Projects: React.FC = () => {
     {
       id: '1',
       title: 'UnsiSmile',
-      description: 'Implemented a feature to allow user to disable a guardian from a patient.',
-      technologies: ['Java', 'SpringBoot'],
-      githubUrl: '',
-      liveUrl: '#'
-    },
-    {
-      id: '2',
-      title: 'UnsiSmile',
-      description: 'Implemented a feature in backend to allow users to change password through email verification.',
-      technologies: ['Java', 'SpringBoot'],
-      githubUrl: '',
+      description: '*Contributed to private/internal repositories*\n\n- Added feature to disable guardian from patient.\n- Implemented feature to change password.\n- Technologies: Java, SpringBoot, MariaDB',
+      technologies: [],
       liveUrl: '#'
     }
   ];

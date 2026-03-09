@@ -19,7 +19,7 @@ const Contributions: React.FC<Props> = ({ contributions }) => {
 
       <div className="projects-grid">
         {contributions.map((contr, index) => (
-          <ProjectCard key={contr.id} project={contr} index={index} />
+          <ProjectCard key={contr.id} project={contr} index={index} showImage={false} />
         ))}
       </div>
     </>

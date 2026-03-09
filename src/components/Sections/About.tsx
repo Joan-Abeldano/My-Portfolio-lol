@@ -20,7 +20,7 @@ const About: React.FC = () => {
           
           <div className="stats-grid">
             <div className="stat-item">
-              <div className="stat-number">3+</div>
+              <div className="stat-number">2+</div>
               <div className="stat-label">Projects Completed</div>
             </div>
             <div className="stat-item">
