@@ -8,11 +8,6 @@ const Contact: React.FC = () => {
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-  };
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData(prev => ({
       ...prev,
@@ -55,7 +50,12 @@ const Contact: React.FC = () => {
           </div>
         </div>
 
-        <form className="contact-form" onSubmit={handleSubmit}>
+        <form
+          className="contact-form"
+          action="https://formspree.io/f/mgonylaq"
+          method="POST"
+        >
+
           <div className="form-group">
             <input
               type="text"
@@ -66,6 +66,7 @@ const Contact: React.FC = () => {
               required
             />
           </div>
+
           <div className="form-group">
             <input
               type="email"
@@ -76,6 +77,7 @@ const Contact: React.FC = () => {
               required
             />
           </div>
+
           <div className="form-group">
             <textarea
               name="message"
@@ -84,12 +86,15 @@ const Contact: React.FC = () => {
               value={formData.message}
               onChange={handleChange}
               required
-            ></textarea>
+            />
           </div>
+
           <button type="submit" className="btn btn-primary">
             Send Message
           </button>
+
         </form>
+
       </div>
     </AnimatedSection>
   );
